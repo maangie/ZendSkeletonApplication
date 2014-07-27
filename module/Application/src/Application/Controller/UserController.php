@@ -21,6 +21,8 @@ class UserController extends AbstractActionController
         // 使用するビューを指定
         $view->setTemplate('/application/index/index.phtml');
 
+        $view->setTerminal(true); // レイアウト機能を無効
+
         return $view;
     }
 }
