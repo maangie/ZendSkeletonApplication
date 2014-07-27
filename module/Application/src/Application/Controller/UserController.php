@@ -14,6 +14,10 @@ class UserController extends AbstractActionController
             'key2' => 'value2',
         );
 
-        return new ViewModel($values);
+        $view = new ViewModel($values);
+
+        $this->layout('layout/layout.phtml'); // 使用するレイアウトを指定
+
+        return $view;
     }
 }
