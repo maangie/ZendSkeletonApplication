@@ -8,6 +8,12 @@ class UserController extends AbstractActionController
 {
     public function addAction()
     {
-        return new ViewModel();
+        // ビューへ渡す値を連想配列にて定義
+        $values = array(
+            'key1' => 'value1',
+            'key2' => 'value2',
+        );
+
+        return new ViewModel($values);
     }
 }
