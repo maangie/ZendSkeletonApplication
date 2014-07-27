@@ -23,6 +23,6 @@ class UserController extends AbstractActionController
 
         $view->setTerminal(true); // レイアウト機能を無効
 
-        return $view;
+        return $this->getResponse(); // レスポンスを指定してビューの出力を無効
     }
 }
